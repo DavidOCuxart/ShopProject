@@ -1,0 +1,26 @@
+{
+  "name": "shopproject",
+  "version": "1.0.0",
+  "description": "Implementation of a QA automation project with Page Object Model design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidOCuxart/ShopProject.git"
+  },
+  "author": "David Olivares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidOCuxart/ShopProject/issues"
+  },
+  "homepage": "https://github.com/DavidOCuxart/ShopProject#readme",
+  "devDependencies": {
+    "cypress": "^15.6.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.2.1"
+  }
+}
