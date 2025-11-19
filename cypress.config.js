@@ -9,6 +9,7 @@ module.exports = defineConfig({
     specPattern: [
       "cypress/e2e/**/*.js", 
       "cypress/e2e/**/*.feature"
-    ]
+    ],
+    chromeWebSecurity: false,
   },
 });

@@ -1,12 +1,14 @@
 {
   "register" : {
-    "firstName": "David",
-    "lastName": "Olivares",
-    "email": "aaaawefdsdfsa@gmail.com",
-    "phoneNumber": "547896321",
+    "firstName": "Test",
+    "lastName": "Test LastName",
     "password": "password",
     "isSubscribed": true
   },
-  "email": "",
-  "url": "https://opencart.abstracta.us"
+  "email": "dolivaresprojects@gmail.com",
+  "password": "password",
+  "url": "https://opencart.abstracta.us",
+  "phoneNumber": 852147963,
+  "firstName": "David",
+  "lastName": "Olivares Cuxart"
 }

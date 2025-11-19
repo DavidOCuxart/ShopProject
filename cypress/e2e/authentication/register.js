@@ -10,8 +10,8 @@ describe("Authentication process", () => {
     })
 
     it("Register process from main Site", function() {
-        const register = this.data.register;
         cy.goToUrl(this.data.url);
+        const register = this.data.register;
         this.registerPage = this.mainSite.goTo("Register");
         this.registerPage.introduceDetails(register.firstName, 
                                             register.lastName, 
