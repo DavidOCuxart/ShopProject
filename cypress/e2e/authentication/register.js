@@ -13,7 +13,7 @@ describe("Authentication process", () => {
         const register = this.data.register;
         cy.goToUrl(this.data.url);
         this.registerPage = this.mainSite.goTo("Register");
-        this.registerPage.introduceDetails(register.name, 
+        this.registerPage.introduceDetails(register.firstName, 
                                             register.lastName, 
                                             register.password,
                                             register.isSubscribed

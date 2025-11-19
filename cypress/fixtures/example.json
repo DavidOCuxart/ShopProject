@@ -1,7 +1,9 @@
 {
   "register" : {
-    "name": "David",
+    "firstName": "David",
     "lastName": "Olivares",
+    "email": "aaaawefdsdfsa@gmail.com",
+    "phoneNumber": "547896321",
     "password": "password",
     "isSubscribed": true
   },
