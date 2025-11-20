@@ -1,5 +1,0 @@
-describe("Searching Products", () => {
-    it("", () => {
-        
-    })
-})

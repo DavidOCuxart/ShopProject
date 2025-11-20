@@ -11,8 +11,8 @@ describe("Authentication process", () => {
     })
 
     it("LogIn", function() {
+        const user = this.data.userInformation.userLogIn;
         this.logIn = this.mainSite.goTo("Login");
-        this.logIn.authDetails(this.data.email, this.data.password)
-        this.logIn.confirmLogIn(this.data.email);
+        this.logIn.authDetails(user.email, user.password)
     })
 })

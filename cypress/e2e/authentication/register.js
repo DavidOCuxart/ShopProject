@@ -11,12 +11,12 @@ describe("Authentication process", () => {
 
     it("Register process from main Site", function() {
         cy.goToUrl(this.data.url);
-        const register = this.data.register;
+        const user = this.data.userInformation.userRegister;
         this.registerPage = this.mainSite.goTo("Register");
-        this.registerPage.introduceDetails(register.firstName, 
-                                            register.lastName, 
-                                            register.password,
-                                            register.isSubscribed
+        this.registerPage.introduceDetails(user.firstName, 
+                                            user.lastName, 
+                                            user.password,
+                                            user.isSubscribed
                                         );
         
     })

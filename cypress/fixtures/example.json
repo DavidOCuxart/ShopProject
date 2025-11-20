@@ -1,14 +1,27 @@
 {
-  "register" : {
-    "firstName": "Test",
-    "lastName": "Test LastName",
-    "password": "password",
-    "isSubscribed": true
+  "userInformation":{
+    "userRegister" : {
+      "firstName": "Test",
+      "lastName": "Test LastName",
+      "password": "password",
+      "isSubscribed": true
+    },
+    "userLogIn": {
+      "firstName": "David",
+      "lastName": "Olivares Cuxart",
+      "email": "dolivaresprojects@gmail.com",
+      "password": "password",
+      "phoneNumber": 852147963
+    }
   },
-  "email": "dolivaresprojects@gmail.com",
-  "password": "password",
-  "url": "https://opencart.abstracta.us",
-  "phoneNumber": 852147963,
-  "firstName": "David",
-  "lastName": "Olivares Cuxart"
+  "products": {
+    "product_1": {
+      "name": "iPhone",
+      "amount": 2
+    },
+    "product_2": {
+      "name": "Samsung"
+    }
+  },
+  "url": "https://opencart.abstracta.us"
 }
