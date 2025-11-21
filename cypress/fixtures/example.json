@@ -16,7 +16,11 @@
   },
   "products": {
     "product_1": {
+      "id" : 40,
       "name": "iPhone",
+      "model": "product 11",
+      "quantity": 1,
+      "unitPrice": "79.24€",	
       "amount": 2
     },
     "product_2": {

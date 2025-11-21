@@ -27,3 +27,44 @@
 Cypress.Commands.add("goToUrl", (url) => {
     cy.visit(url);
 })
+
+Cypress.Commands.add("logIn", (email, password) => {
+    return cy.request({
+        method: "POST",
+        url: "https://opencart.abstracta.us/index.php?route=account/login",
+        form: true,
+        headers: {
+        "X-Requested-With": "XMLHttpRequest"
+        },
+        body: {
+        email,
+        password
+        }
+    }).then((resp) => {
+        expect(resp.status).to.be.oneOf([200, 302]);
+        return resp;
+    });
+});
+
+Cypress.Commands.add("addProduct", (id, quantity = 1) => {
+    return cy.request({
+        method: "POST",
+        url: "https://opencart.abstracta.us/index.php?route=checkout/cart/add",
+        form: true,
+        headers: {
+        "X-Requested-With": "XMLHttpRequest"
+        },
+        body: {
+        product_id: id,
+        quantity: quantity
+        }
+    }).then((resp) => {
+            expect(resp.status).to.eq(200);
+            if (resp.body && typeof resp.body === "object") {
+                expect(resp.body).to.have.property("success");
+            } else {
+                expect(resp.body).to.exist;
+            }
+            return resp;
+    });
+});

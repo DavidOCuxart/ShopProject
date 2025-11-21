@@ -19,6 +19,10 @@ class ProductPage{
     confirmAddToCart(productName){
         cy.get(".alert-success").contains(`You have added ${productName} to your shopping cart!`)
     }
+
+    goToCart(){
+        
+    }
 }
 
 export default ProductPage;

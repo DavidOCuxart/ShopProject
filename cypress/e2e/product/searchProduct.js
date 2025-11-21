@@ -6,17 +6,10 @@ describe("Searching Products", () => {
             this.data = data;
             this.productPage = new ProductPage();
 
-            cy.request({
-                method: "POST",
-                url: "https://opencart.abstracta.us/index.php?route=account/login",
-                form: true,
-                body: {
-                    email: data.userInformation.userLogIn.email,
-                    password: data.userInformation.userLogIn.password
-                }
-            }).then(() => {
-                cy.goToUrl(data.url);
-            });
+            cy.logIn(data.userInformation.userLogIn.email,
+                data.userInformation.userLogIn.password,
+                this.data.url
+            )
         });
     });
 
@@ -38,7 +31,7 @@ describe("Searching Products", () => {
         this.productPage.confirmAddToCart(product_1.name)
     })
 
-    it("add to wish List", function(){
+    it.skip("add to wish List", function(){
         
     })
 

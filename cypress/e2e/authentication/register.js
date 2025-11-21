@@ -2,7 +2,7 @@
 import MainSite from "../../pages/Main/mainSite";
 
 describe("Authentication process", () => {
-    before(function() {
+    beforeEach(function() {
         cy.fixture("example.json").then(function(data) {
             this.data = data;
             this.mainSite = new MainSite();
@@ -18,6 +18,5 @@ describe("Authentication process", () => {
                                             user.password,
                                             user.isSubscribed
                                         );
-        
     })
 })
