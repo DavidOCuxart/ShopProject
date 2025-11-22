@@ -27,5 +27,6 @@
       "name": "Samsung"
     }
   },
-  "url": "https://opencart.abstracta.us"
+  "url": "https://opencart.abstracta.us",
+  "logInURL": "https://opencart.abstracta.us/index.php?route=account/login"
 }

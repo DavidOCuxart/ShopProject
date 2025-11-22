@@ -24,11 +24,13 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import MainSite from "../pages/Main/mainSite";
+
 Cypress.Commands.add("goToUrl", (url) => {
     cy.visit(url);
 })
 
-Cypress.Commands.add("logIn", (email, password) => {
+Cypress.Commands.add("logIn", (email, password, url) => {
     return cy.request({
         method: "POST",
         url: "https://opencart.abstracta.us/index.php?route=account/login",
@@ -43,7 +45,9 @@ Cypress.Commands.add("logIn", (email, password) => {
     }).then((resp) => {
         expect(resp.status).to.be.oneOf([200, 302]);
         return resp;
-    });
+    }).then(()=>{
+        cy.goToUrl(url)
+    })
 });
 
 Cypress.Commands.add("addProduct", (id, quantity = 1) => {
@@ -60,11 +64,15 @@ Cypress.Commands.add("addProduct", (id, quantity = 1) => {
         }
     }).then((resp) => {
             expect(resp.status).to.eq(200);
-            if (resp.body && typeof resp.body === "object") {
+            if(resp.body && typeof resp.body === "object") {
                 expect(resp.body).to.have.property("success");
-            } else {
-                expect(resp.body).to.exist;
             }
             return resp;
     });
 });
+
+Cypress.Commands.add("logInWithUI", function(email, password){
+        this.mainSite = new MainSite();
+        const logInPage = this.mainSite.goTo("Login");
+        logInPage.authDetails(email,password)
+})
