@@ -55,9 +55,6 @@ Cypress.Commands.add("addProduct", (id, quantity = 1) => {
         method: "POST",
         url: "https://opencart.abstracta.us/index.php?route=checkout/cart/add",
         form: true,
-        headers: {
-        "X-Requested-With": "XMLHttpRequest"
-        },
         body: {
         product_id: id,
         quantity: quantity
